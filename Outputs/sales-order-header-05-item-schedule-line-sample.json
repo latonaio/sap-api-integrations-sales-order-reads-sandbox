@@ -1,0 +1,7 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-sales-order-reads/SAP_API_Caller/caller.go#L78",
+	"function": "sap-api-integrations-sales-order-reads/SAP_API_Caller.(*SAPAPICaller).Header",
+	"level": "INFO",
+	"message": "[{SalesOrder:1 SalesOrderItem:10 ScheduleLine:1 RequestedDeliveryDate:/Date(1471392000000)/ ConfirmedDeliveryDate: OrderQuantityUnit:PC ScheduleLineOrderQuantity:3 ConfdOrderQtyByMatlAvailCheck:0 DeliveredQtyInOrderQtyUnit:0 OpenConfdDelivQtyInOrdQtyUnit:0 CorrectedQtyInOrderQtyUnit:3 DelivBlockReasonForSchedLine:} {SalesOrder:1 SalesOrderItem:10 ScheduleLine:2 RequestedDeliveryDate: ConfirmedDeliveryDate:/Date(1471564800000)/ OrderQuantityUnit:PC ScheduleLineOrderQuantity:0 ConfdOrderQtyByMatlAvailCheck:3 DeliveredQtyInOrderQtyUnit:3 OpenConfdDelivQtyInOrdQtyUnit:0 CorrectedQtyInOrderQtyUnit:0 DelivBlockReasonForSchedLine:}]",
+	"time": "2021-12-11T16:43:49.868842+09:00"
+}

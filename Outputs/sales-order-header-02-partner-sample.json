@@ -1,0 +1,7 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-sales-order-reads/SAP_API_Caller/caller.go#L57",
+	"function": "sap-api-integrations-sales-order-reads/SAP_API_Caller.(*SAPAPICaller).Header",
+	"level": "INFO",
+	"message": "&{SalesOrder:1 PartnerFunction:SP Customer:17100001 Supplier:}",
+	"time": "2021-12-11T15:33:00.568833+09:00"
+}

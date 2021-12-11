@@ -1,0 +1,7 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-sales-order-reads/SAP_API_Caller/caller.go#L112",
+	"function": "sap-api-integrations-sales-order-reads/SAP_API_Caller.(*SAPAPICaller).Item",
+	"level": "INFO",
+	"message": "&{SalesOrder:1 SalesOrderItem:10 PricingProcedureStep:910 PricingProcedureCounter:1 ConditionType:DCD1 PriceConditionDeterminationDte:/Date(1471392000000)/ ConditionCalculationType:A ConditionBaseValue:56.860000000 ConditionRateValue:0.000000000 ConditionCurrency: ConditionQuantity:0 ConditionQuantityUnit: ConditionCategory:E PricingScaleType: ConditionRecord: ConditionSequentialNumber:0 TaxCode: ConditionAmount:0.00 TransactionCurrency:USD PricingScaleBasis: ConditionScaleBasisValue:0.000000000 ConditionScaleBasisUnit: ConditionScaleBasisCurrency: ConditionIsManuallyChanged:false}",
+	"time": "2021-12-11T15:34:04.42134+09:00"
+}

@@ -24,9 +24,10 @@ sap-api-integrations-sales-order-reads が対応する APIサービス は、次
 ## 本レポジトリ に 含まれる API名
 sap-api-integrations-sales-order-reads には、次の API をコールするためのリソースが含まれています。  
 
-* A_SalesOrder（受注 - ヘッダ）※受注ヘッダの詳細データを取得するために、ToHeaderPartner、と合わせて利用されます。
+* A_SalesOrder（受注 - ヘッダ）※受注の詳細データを取得するために、ToHeaderPartner、ToHeaderItem、ToItemPricingElement、ToItemScheduleLine、と合わせて利用されます。
 * A_SalesOrderItem（受注 - 明細）※受注明細の詳細データを取得するために、ToItemPricingElement、ToItemScheduleLine、と合わせて利用されます。
 * ToHeaderPartner（受注 - ヘッダ取引先）
+* ToHeaderItem（受注 - 明細）
 * ToItemPricingElement（受注 - 価格条件）
 * ToItemScheduleLine（受注 - 納入日程行）
 

@@ -100,7 +100,7 @@ func (c *SAPAPICaller) callSalesOrderSrvAPIRequirementHeader(api, salesOrder str
 	return data, nil
 }
 
-func (c *SAPAPICaller) callToHeaderPartner(url string) (*sap_api_output_formatter.ToHeaderPartner, error) {
+func (c *SAPAPICaller) callToHeaderPartner(url string) ([]sap_api_output_formatter.ToHeaderPartner, error) {
 	req, _ := http.NewRequest("GET", url, nil)
 	c.setHeaderAPIKeyAccept(req)
 

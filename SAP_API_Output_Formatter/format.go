@@ -156,7 +156,7 @@ func ConvertToItem(raw []byte, l *logger.Logger) ([]Item, error) {
 	return item, nil
 }
 
-func ConvertToToHeaderPartner(raw []byte, l *logger.Logger) (*ToHeaderPartner, error) {
+func ConvertToToHeaderPartner(raw []byte, l *logger.Logger) ([]ToHeaderPartner, error) {
 	pm := &responses.ToHeaderPartner{}
 
 	err := json.Unmarshal(raw, pm)
@@ -169,14 +169,18 @@ func ConvertToToHeaderPartner(raw []byte, l *logger.Logger) (*ToHeaderPartner, e
 	if len(pm.D.Results) > 10 {
 		l.Info("raw data has too many Results. %d Results exist. expected only 1 Result. Use the first of Results array", len(pm.D.Results))
 	}
-	data := pm.D.Results[0]
-
-	return &ToHeaderPartner{
+	toHeaderPartner := make([]ToHeaderPartner, 0, 10)
+	for i := 0; i < 10 && i < len(pm.D.Results); i++ {
+		data := pm.D.Results[i]
+		toHeaderPartner = append(toHeaderPartner, ToHeaderPartner{
 		SalesOrder:      data.SalesOrder,
 		PartnerFunction: data.PartnerFunction,
 		Customer:        data.Customer,
 		Supplier:        data.Supplier,
-	}, nil
+		})
+	}
+
+	return toHeaderPartner, nil
 }
 
 func ConvertToToItem(raw []byte, l *logger.Logger) ([]ToItem, error) {

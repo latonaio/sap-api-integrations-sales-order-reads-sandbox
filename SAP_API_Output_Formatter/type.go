@@ -61,7 +61,7 @@ type Header struct {
 	TotalCreditCheckStatus         string `json:"TotalCreditCheckStatus"`
 	BillingDocumentDate            string `json:"BillingDocumentDate"`
     ToHeaderPartner                string `json:"to_Partner"`
-    ToHeaderItem                   string `json:"to_Item"`	
+    ToItem                         string `json:"to_Item"`	
 }
 
 type Item struct {
@@ -123,7 +123,7 @@ type ToHeaderPartner struct {
 	Supplier                    string `json:"Supplier"`
 }
 
-type ToHeaderItem struct {
+type ToItem struct {
 	SalesOrder                  string `json:"SalesOrder"`
 	SalesOrderItem              string `json:"SalesOrderItem"`
 	SalesOrderItemCategory      string `json:"SalesOrderItemCategory"`

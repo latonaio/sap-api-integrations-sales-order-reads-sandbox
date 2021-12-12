@@ -63,7 +63,7 @@ type Header struct {
 					URI string `json:"uri"`
 				} `json:"__deferred"`
 			} `json:"to_Partner"`
-			ToHeaderItem struct {
+			ToItem struct {
 				Deferred struct {
 					URI string `json:"uri"`
 				} `json:"__deferred"`

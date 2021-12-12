@@ -56,21 +56,21 @@ func (c *SAPAPICaller) Header(salesOrder string) {
 	}
 	c.log.Info(headerPartnerData)
 
-	headerItemData, err := c.callToHeaderItem(headerData[0].ToHeaderItem)
+	itemData, err := c.callToItem(headerData[0].ToItem)
 	if err != nil {
 		c.log.Error(err)
 		return
 	}
-	c.log.Info(headerItemData)
+	c.log.Info(itemData)
 	
-	itemPricingElementData, err := c.callToItemPricingElement(headerItemData[0].ToItemPricingElement)
+	itemPricingElementData, err := c.callToItemPricingElement(itemData[0].ToItemPricingElement)
 	if err != nil {
 		c.log.Error(err)
 		return
 	}
 	c.log.Info(itemPricingElementData)
 
-	itemScheduleLineData, err := c.callToItemScheduleLine(headerItemData[0].ToItemScheduleLine)
+	itemScheduleLineData, err := c.callToItemScheduleLine(itemData[0].ToItemScheduleLine)
 	if err != nil {
 		c.log.Error(err)
 		return
@@ -118,7 +118,7 @@ func (c *SAPAPICaller) callToHeaderPartner(url string) (*sap_api_output_formatte
 	return data, nil
 }
 
-func (c *SAPAPICaller) callToHeaderItem(url string) ([]sap_api_output_formatter.ToHeaderItem, error) {
+func (c *SAPAPICaller) callToItem(url string) ([]sap_api_output_formatter.ToItem, error) {
 	req, _ := http.NewRequest("GET", url, nil)
 	c.setHeaderAPIKeyAccept(req)
 
@@ -129,7 +129,7 @@ func (c *SAPAPICaller) callToHeaderItem(url string) ([]sap_api_output_formatter.
 	defer resp.Body.Close()
 
 	byteArray, _ := ioutil.ReadAll(resp.Body)
-	data, err := sap_api_output_formatter.ConvertToToHeaderItem(byteArray, c.log)
+	data, err := sap_api_output_formatter.ConvertToToItem(byteArray, c.log)
 	if err != nil {
 		return nil, xerrors.Errorf("convert error: %w", err)
 	}

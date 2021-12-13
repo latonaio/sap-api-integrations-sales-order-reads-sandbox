@@ -28,8 +28,8 @@ sap-api-integrations-sales-order-reads には、次の API をコールするた
 * A_SalesOrderItem（受注 - 明細）※受注明細の詳細データを取得するために、ToItemPricingElement、ToItemScheduleLine、と合わせて利用されます。
 * ToHeaderPartner（受注 - ヘッダ取引先）
 * ToItem（受注 - 明細）
-* ToItemPricingElement（受注 - 価格条件）
-* ToItemScheduleLine（受注 - 納入日程行）
+* ToItemPricingElement（受注 - 明細価格条件）
+* ToItemScheduleLine（受注 - 明細納入日程行）
 
 ## API への 値入力条件 の 初期値
 sap-api-integrations-sales-order-reads において、API への値入力条件の初期値は、入力ファイルレイアウトの種別毎に、次の通りとなっています。  

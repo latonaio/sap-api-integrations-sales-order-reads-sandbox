@@ -173,7 +173,7 @@ func (c *SAPAPICaller) callToItemScheduleLine2(url string) ([]sap_api_output_for
 }
 
 func (c *SAPAPICaller) Item(salesOrder, salesOrderItem string) {
-	itemData, err := c.callPurchaseOrderSrvAPIRequirementItem("A_SalesOrderItem", salesOrder, salesOrderItem)
+	itemData, err := c.callSalesOrderSrvAPIRequirementItem("A_SalesOrderItem", salesOrder, salesOrderItem)
 	if err != nil {
 		c.log.Error(err)
 		return
@@ -195,7 +195,7 @@ func (c *SAPAPICaller) Item(salesOrder, salesOrderItem string) {
 	c.log.Info(itemScheduleLineData)
 }
 
-func (c *SAPAPICaller) callPurchaseOrderSrvAPIRequirementItem(api, salesOrder, salesOrderItem string) ([]sap_api_output_formatter.Item, error) {
+func (c *SAPAPICaller) callSalesOrderSrvAPIRequirementItem(api, salesOrder, salesOrderItem string) ([]sap_api_output_formatter.Item, error) {
 	url := strings.Join([]string{c.baseURL, "API_SALES_ORDER_SRV", api}, "/")
 	req, _ := http.NewRequest("GET", url, nil)
 

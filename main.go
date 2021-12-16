@@ -15,8 +15,16 @@ func main() {
 		"https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/", l,
 	)
 
+	accepter := inoutSDC.Accepter
+	if len(accepter) == 0 || accepter[0] == "All" {
+		accepter = []string{
+			"Header", "Item",
+		}
+	}
+
 	caller.AsyncGetSalesOrder(
 		inoutSDC.SalesOrder.SalesOrder,
 		inoutSDC.SalesOrder.SalesOrderItem.SalesOrderItem,
+		accepter,
 	)
 }

@@ -42,6 +42,7 @@ type EC_MC struct {
 		} `json:"work"`
 	} `json:"production_order"`
 	APISchema                         string `json:"api_schema"`
+	Accepter                        []string `json:"accepter"`
 	MaterialCode                      string `json:"material_code"`
 	Supplier                          string `json:"plant/supplier"`
 	Stock                             string `json:"stock"`
@@ -198,6 +199,7 @@ type SDC struct {
 		} `json:"SalesOrderItem"`
 	} `json:"SalesOrder"`
 	APISchema  string `json:"api_schema"`
+	Accepter []string `json:"accepter"`
 	SONo       string `json:"sales_order"`
 	Deleted    bool   `json:"deleted"`
 }

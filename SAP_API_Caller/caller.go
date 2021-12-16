@@ -26,18 +26,26 @@ func NewSAPAPICaller(baseUrl string, l *logger.Logger) *SAPAPICaller {
 	}
 }
 
-func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string) {
+func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string, accepter []string) {
 	wg := &sync.WaitGroup{}
+	wg.Add(len(accepter))
+	for _, fn := range accepter {
+		switch fn {
+		case "Header":
+			func() {
+				c.Header(salesOrder)
+				wg.Done()
+			}()
+		case "Item":
+			func() {
+				c.Item(salesOrder, salesOrderItem)
+				wg.Done()
+			}()
+		default:
+			wg.Done()
+		}
+	}
 
-	wg.Add(2)
-	func() {
-		c.Header(salesOrder)
-		wg.Done()
-	}()
-	func() {
-		c.Item(salesOrder, salesOrderItem)
-		wg.Done()
-	}()
 	wg.Wait()
 }
 

@@ -97,4 +97,20 @@ func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string, acc
 }
 ```
 
+## Output  
+本マイクロサービスでは、[golang-logging-library](https://github.com/latonaio/golang-logging-library) により、以下のようなデータがJSON形式で出力されます。  
+以下の sample.json の例は、SAP 受注明細 の ヘッダ が取得された結果の JSON の例です。  
+以下の項目のうち、"BaseUnit" ～ "WeightUnit" は、/SAP_API_Output_Formatter/type.go 内 の Type Product {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
+
+```
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-sales-order-reads/SAP_API_Caller/caller.go#L50",
+	"function": "sap-api-integrations-sales-order-reads/SAP_API_Caller.(*SAPAPICaller).Header",
+	"level": "INFO",
+	"message": "[{SalesOrder:1 SalesOrderType:OR SalesOrganization:1710 DistributionChannel:10 OrganizationDivision:00 SalesGroup: SalesOffice: SalesDistrict: SoldToParty:17100001 CreationDate:/Date(1471392000000)/ LastChangeDate:/Date(1472774400000)/ ExternalDocumentID: LastChangeDateTime:/Date(1472796947125+0000)/ PurchaseOrderByCustomer:gfh CustomerPurchaseOrderDate: SalesOrderDate:/Date(1471392000000)/ TotalNetAmount:52.65 OverallDeliveryStatus:C TotalBlockStatus: OverallOrdReltdBillgStatus: OverallSDDocReferenceStatus: TransactionCurrency:USD SDDocumentReason: PricingDate:/Date(1471392000000)/ PriceDetnExchangeRate:1.00000 RequestedDeliveryDate:/Date(1471392000000)/ ShippingCondition:01 CompleteDeliveryIsDefined:false ShippingType: HeaderBillingBlockReason: DeliveryBlockReason: IncotermsClassification:EXW CustomerPriceGroup: PriceListType: CustomerPaymentTerms:0004 PaymentMethod: ReferenceSDDocument: ReferenceSDDocumentCategory: CustomerAccountAssignmentGroup:01 AccountingExchangeRate:0.00000 CustomerGroup:01 AdditionalCustomerGroup1: AdditionalCustomerGroup2: AdditionalCustomerGroup3: AdditionalCustomerGroup4: AdditionalCustomerGroup5: CustomerTaxClassification1: TotalCreditCheckStatus: BillingDocumentDate:/Date(1471392000000)/ ToHeaderPartner:https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('1')/to_Partner}]",
+	"time": "2021-12-11T15:33:00.054455+09:00"
+}
+```
+
+
 

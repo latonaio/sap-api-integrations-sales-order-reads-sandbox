@@ -6,7 +6,7 @@ type SalesOrder struct {
 	RedisKey      string `json:"redis_key"`
 	Filepath      string `json:"filepath"`
 	APISchema     string `json:"api_schema"`
-	SalesOrder    string `json:"purchase_order"`
+	SalesOrder    string `json:"sales_order"`
 	Deleted       bool   `json:"deleted"`
 }    
     

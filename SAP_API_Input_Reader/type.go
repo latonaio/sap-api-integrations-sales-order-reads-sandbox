@@ -184,7 +184,7 @@ type SDC struct {
 				ConditionScaleBasisCurrency    string `json:"ConditionScaleBasisCurrency"`
 				ConditionIsManuallyChanged     bool   `json:"ConditionIsManuallyChanged"`
 			} `json:"ItemPricingElement"`
-			ScheduleLine struct {
+			ItemScheduleLine struct {
 				ScheduleLine                  string `json:"ScheduleLine"`
 				RequestedDeliveryDate         string `json:"RequestedDeliveryDate"`
 				ConfirmedDeliveryDate         string `json:"ConfirmedDeliveryDate"`
@@ -195,7 +195,7 @@ type SDC struct {
 				OpenConfdDelivQtyInOrdQtyUnit string `json:"OpenConfdDelivQtyInOrdQtyUnit"`
 				CorrectedQtyInOrderQtyUnit    string `json:"CorrectedQtyInOrderQtyUnit"`
 				DelivBlockReasonForSchedLine  string `json:"DelivBlockReasonForSchedLine"`
-			} `json:"ScheduleLine"`
+			} `json:"ItemScheduleLine"`
 		} `json:"SalesOrderItem"`
 	} `json:"SalesOrder"`
 	APISchema  string `json:"api_schema"`

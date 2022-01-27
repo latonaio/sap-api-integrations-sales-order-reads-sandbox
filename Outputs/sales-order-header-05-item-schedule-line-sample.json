@@ -7,7 +7,7 @@
 			"SalesOrder": "1",
 			"SalesOrderItem": "10",
 			"ScheduleLine": "1",
-			"RequestedDeliveryDate": "/Date(1471392000000)/",
+			"RequestedDeliveryDate": "2016-08-17T09:00:00+09:00",
 			"ConfirmedDeliveryDate": "",
 			"OrderQuantityUnit": "PC",
 			"ScheduleLineOrderQuantity": "3",
@@ -22,7 +22,7 @@
 			"SalesOrderItem": "10",
 			"ScheduleLine": "2",
 			"RequestedDeliveryDate": "",
-			"ConfirmedDeliveryDate": "/Date(1471564800000)/",
+			"ConfirmedDeliveryDate": "2016-08-19T09:00:00+09:00",
 			"OrderQuantityUnit": "PC",
 			"ScheduleLineOrderQuantity": "0",
 			"ConfdOrderQtyByMatlAvailCheck": "3",
@@ -32,5 +32,5 @@
 			"DelivBlockReasonForSchedLine": ""
 		}
 	],
-	"time": "2021-12-27T15:01:25.80107+09:00"
+	"time": "2022-01-27T22:33:01+09:00"
 }

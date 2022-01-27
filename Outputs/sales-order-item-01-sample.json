@@ -11,7 +11,7 @@
 			"PurchaseOrderByCustomer": "gfh",
 			"Material": "TG11",
 			"MaterialByCustomer": "",
-			"PricingDate": "/Date(1471392000000)/",
+			"PricingDate": "2016-08-17T09:00:00+09:00",
 			"BillingPlan": "",
 			"RequestedQuantity": "3",
 			"RequestedQuantityUnit": "PC",
@@ -26,7 +26,7 @@
 			"NetAmount": "52.65",
 			"MaterialGroup": "L001",
 			"MaterialPricingGroup": "",
-			"BillingDocumentDate": "/Date(1471392000000)/",
+			"BillingDocumentDate": "2016-08-17T09:00:00+09:00",
 			"Batch": "",
 			"ProductionPlant": "1710",
 			"StorageLocation": "",
@@ -55,5 +55,5 @@
 			"to_ScheduleLine": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrderItem(SalesOrder='1',SalesOrderItem='10')/to_ScheduleLine"
 		}
 	],
-	"time": "2021-12-27T15:13:43.693007+09:00"
+	"time": "2022-01-27T22:34:52+09:00"
 }

@@ -97,9 +97,9 @@ func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string, acc
 }
 ```
 ## Output  
-本マイクロサービスでは、[golang-logging-library](https://github.com/latonaio/golang-logging-library) により、以下のようなデータがJSON形式で出力されます。  
+本マイクロサービスでは、[golang-logging-library-for-sap](https://github.com/latonaio/golang-logging-library-for-sap) により、以下のようなデータがJSON形式で出力されます。  
 以下の sample.json の例は、SAP 受注 の ヘッダデータ が取得された結果の JSON の例です。  
-以下の項目のうち、"SalesOrder" ～ "ToHeaderPartner" は、/SAP_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
+以下の項目のうち、"SalesOrder" ～ "ToHeaderPartner" は、/SAP_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library-for-sap による 定型フォーマットの出力結果です。  
 
 ```
 {
@@ -117,13 +117,13 @@ func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string, acc
 			"SalesOffice": "",
 			"SalesDistrict": "",
 			"SoldToParty": "17100001",
-			"CreationDate": "/Date(1471392000000)/",
-			"LastChangeDate": "/Date(1472774400000)/",
+			"CreationDate": "2016-08-17T09:00:00+09:00",
+			"LastChangeDate": "2016-09-02T09:00:00+09:00",
 			"ExternalDocumentID": "",
-			"LastChangeDateTime": "/Date(1472796947125+0000)/",
+			"LastChangeDateTime": "",
 			"PurchaseOrderByCustomer": "gfh",
 			"CustomerPurchaseOrderDate": "",
-			"SalesOrderDate": "/Date(1471392000000)/",
+			"SalesOrderDate": "2016-08-17T09:00:00+09:00",
 			"TotalNetAmount": "52.65",
 			"OverallDeliveryStatus": "C",
 			"TotalBlockStatus": "",
@@ -131,9 +131,9 @@ func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string, acc
 			"OverallSDDocReferenceStatus": "",
 			"TransactionCurrency": "USD",
 			"SDDocumentReason": "",
-			"PricingDate": "/Date(1471392000000)/",
+			"PricingDate": "2016-08-17T09:00:00+09:00",
 			"PriceDetnExchangeRate": "1.00000",
-			"RequestedDeliveryDate": "/Date(1471392000000)/",
+			"RequestedDeliveryDate": "2016-08-17T09:00:00+09:00",
 			"ShippingCondition": "01",
 			"CompleteDeliveryIsDefined": false,
 			"ShippingType": "",
@@ -156,13 +156,14 @@ func (c *SAPAPICaller) AsyncGetSalesOrder(salesOrder, salesOrderItem string, acc
 			"AdditionalCustomerGroup5": "",
 			"CustomerTaxClassification1": "",
 			"TotalCreditCheckStatus": "",
-			"BillingDocumentDate": "/Date(1471392000000)/",
+			"BillingDocumentDate": "2016-08-17T09:00:00+09:00",
 			"to_Partner": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('1')/to_Partner",
 			"to_Item": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_SALES_ORDER_SRV/A_SalesOrder('1')/to_Item"
 		}
 	],
-	"time": "2021-12-27T15:01:24.163719+09:00"
+	"time": "2022-01-27T22:32:57+09:00"
 }
+
 ```
 
 

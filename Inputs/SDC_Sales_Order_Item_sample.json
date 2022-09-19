@@ -105,6 +105,15 @@
 			"SDProcessStatus": "",
 			"DeliveryStatus": "",
 			"OrderRelatedBillingStatus": "",
+			"ItemPartner": {
+				"SalesOrder": "",
+				"SalesOrderItem": "",
+				"PartnerFunction": "",
+				"Customer": "",
+				"Supplier": "",
+				"Personnel": "",
+				"ContactPerson": ""
+				},
 			"ItemPricingElement": {
 				"PricingProcedureStep": "",
 				"PricingProcedureCounter": "",
@@ -143,7 +152,7 @@
 			}
 		}
 	},
-	"api_schema": "sap.s4.beh.salesorder.v1.SalesOrder.Created.v1",
+	"api_schema": "SAPSalesOrderReads",
 	"accepter": ["Item"],
 	"sales_order": "1",
 	"deleted": false

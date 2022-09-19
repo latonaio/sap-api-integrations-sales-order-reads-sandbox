@@ -5,11 +5,12 @@ type SalesOrder struct {
 	Result        bool   `json:"result"`
 	RedisKey      string `json:"redis_key"`
 	Filepath      string `json:"filepath"`
+	Product       string `json:"Product"`
 	APISchema     string `json:"api_schema"`
 	SalesOrder    string `json:"sales_order"`
-	Deleted       bool   `json:"deleted"`
-}    
-    
+	Deleted       string `json:"deleted"`
+}
+
 type Header struct {
 	SalesOrder                     string `json:"SalesOrder"`
 	SalesOrderType                 string `json:"SalesOrderType"`
@@ -60,8 +61,8 @@ type Header struct {
 	CustomerTaxClassification1     string `json:"CustomerTaxClassification1"`
 	TotalCreditCheckStatus         string `json:"TotalCreditCheckStatus"`
 	BillingDocumentDate            string `json:"BillingDocumentDate"`
-    ToHeaderPartner                string `json:"to_Partner"`
-    ToItem                         string `json:"to_Item"`	
+	ToHeaderPartner                string `json:"to_Partner"`
+	ToItem                         string `json:"to_Item"`
 }
 
 type Item struct {
@@ -112,15 +113,16 @@ type Item struct {
 	SDProcessStatus             string `json:"SDProcessStatus"`
 	DeliveryStatus              string `json:"DeliveryStatus"`
 	OrderRelatedBillingStatus   string `json:"OrderRelatedBillingStatus"`
+	ToItemPartner               string `json:"to_Partner"`
 	ToItemPricingElement        string `json:"to_PricingElement"`
 	ToItemScheduleLine          string `json:"to_ScheduleLine"`
 }
 
 type ToHeaderPartner struct {
-	SalesOrder                  string `json:"SalesOrder"`
-	PartnerFunction             string `json:"PartnerFunction"`
-	Customer                    string `json:"Customer"`
-	Supplier                    string `json:"Supplier"`
+	SalesOrder      string `json:"SalesOrder"`
+	PartnerFunction string `json:"PartnerFunction"`
+	Customer        string `json:"Customer"`
+	Supplier        string `json:"Supplier"`
 }
 
 type ToItem struct {
@@ -171,8 +173,19 @@ type ToItem struct {
 	SDProcessStatus             string `json:"SDProcessStatus"`
 	DeliveryStatus              string `json:"DeliveryStatus"`
 	OrderRelatedBillingStatus   string `json:"OrderRelatedBillingStatus"`
+	ToItemPartner               string `json:"to_Partner"`
 	ToItemPricingElement        string `json:"to_PricingElement"`
 	ToItemScheduleLine          string `json:"to_ScheduleLine"`
+}
+
+type ToItemPartner struct {
+	SalesOrder                  string `json:"SalesOrder"` 
+	SalesOrderItem              string `json:"SalesOrderItem"`
+	PartnerFunction             string `json:"PartnerFunction"` 
+	Customer                    string `json:"Customer"`
+	Supplier                    string `json:"Supplier"`
+	Personnel                   string `json:"Personnel"` 
+	ContactPerson               string `json:"ContactPerson"`
 }
 
 type ToItemPricingElement struct {
@@ -203,16 +216,16 @@ type ToItemPricingElement struct {
 }
 
 type ToItemScheduleLine struct {
-	SalesOrder                     string `json:"SalesOrder"`
-	SalesOrderItem                 string `json:"SalesOrderItem"`
-	ScheduleLine                   string `json:"ScheduleLine"`
-	RequestedDeliveryDate          string `json:"RequestedDeliveryDate"`
-	ConfirmedDeliveryDate          string `json:"ConfirmedDeliveryDate"`
-	OrderQuantityUnit              string `json:"OrderQuantityUnit"`
-	ScheduleLineOrderQuantity      string `json:"ScheduleLineOrderQuantity"`
-	ConfdOrderQtyByMatlAvailCheck  string `json:"ConfdOrderQtyByMatlAvailCheck"`
-	DeliveredQtyInOrderQtyUnit     string `json:"DeliveredQtyInOrderQtyUnit"`
-	OpenConfdDelivQtyInOrdQtyUnit  string `json:"OpenConfdDelivQtyInOrdQtyUnit"`
-	CorrectedQtyInOrderQtyUnit     string `json:"CorrectedQtyInOrderQtyUnit"`
-	DelivBlockReasonForSchedLine   string `json:"DelivBlockReasonForSchedLine"`
+	SalesOrder                    string `json:"SalesOrder"`
+	SalesOrderItem                string `json:"SalesOrderItem"`
+	ScheduleLine                  string `json:"ScheduleLine"`
+	RequestedDeliveryDate         string `json:"RequestedDeliveryDate"`
+	ConfirmedDeliveryDate         string `json:"ConfirmedDeliveryDate"`
+	OrderQuantityUnit             string `json:"OrderQuantityUnit"`
+	ScheduleLineOrderQuantity     string `json:"ScheduleLineOrderQuantity"`
+	ConfdOrderQtyByMatlAvailCheck string `json:"ConfdOrderQtyByMatlAvailCheck"`
+	DeliveredQtyInOrderQtyUnit    string `json:"DeliveredQtyInOrderQtyUnit"`
+	OpenConfdDelivQtyInOrdQtyUnit string `json:"OpenConfdDelivQtyInOrdQtyUnit"`
+	CorrectedQtyInOrderQtyUnit    string `json:"CorrectedQtyInOrderQtyUnit"`
+	DelivBlockReasonForSchedLine  string `json:"DelivBlockReasonForSchedLine"`
 }
